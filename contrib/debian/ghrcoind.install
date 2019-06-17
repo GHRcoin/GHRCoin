@@ -1,0 +1,2 @@
+usr/local/bin/ghrcoind usr/bin
+usr/local/bin/ghrcoin-cli usr/bin

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=GHRCoin
+Comment=GHRCoin P2P Cryptocurrency
+Comment[fr]=GHRCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=GHRCoin, eşten eşe kriptografik sanal para birimi
+Exec=ghrcoin-qt %u
+Terminal=false
+Type=Application
+Icon=ghrcoin128
+MimeType=x-scheme-handler/ghrcoin;
+Categories=Office;Finance;

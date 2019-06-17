@@ -1,0 +1,26 @@
+# /etc/conf.d/ghrcoind: config file for /etc/init.d/ghrcoind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/ghrcoin/ghrcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/ghrcoind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/ghrcoind.pid"
+
+# Where to write ghrcoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/ghrcoind"
+
+# User and group to own ghrcoind process
+#BITCOIND_USER="ghrcoin"
+#BITCOIND_GROUP="ghrcoin"
+
+# Path to ghrcoind executable
+#BITCOIND_BIN="/usr/bin/ghrcoind"
+
+# Nice value to run ghrcoind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

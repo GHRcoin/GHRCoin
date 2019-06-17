@@ -1,0 +1,26 @@
+[Unit]
+Description=GHRCoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=ghrcoin
+Group=ghrcoin
+
+Type=forking
+PIDFile=/var/lib/ghrcoind/ghrcoind.pid
+
+ExecStart=/usr/bin/ghrcoind -daemon -pid=/var/lib/ghrcoind/ghrcoind.pid \
+          -conf=/etc/ghrcoin/ghrcoin.conf -datadir=/var/lib/ghrcoind
+
+ExecStop=-/usr/bin/ghrcoin-cli -conf=/etc/ghrcoin/ghrcoin.conf \
+         -datadir=/var/lib/ghrcoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
